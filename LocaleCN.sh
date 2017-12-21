@@ -24,10 +24,10 @@ fi
 
 # Install some dependencies
 if [ "${release}" == "centos" ]; then
-	yum -y install wget ca-certificates locales localedef > /dev/null 2>&1
+	yum -y install wget ca-certificates locales localedef 
 else
-	apt-get update > /dev/null 2>&1
-	apt-get -y install wget ca-certificates locales  > /dev/null 2>&1
+	apt-get update 
+	apt-get -y install wget ca-certificates locales 
 fi
 
 # Get Word dir
@@ -65,6 +65,7 @@ elif [ "${release}" == "ubuntu" ]; then
 fi
 
 # Echo Success
+clear
 echo "Your VPS Language setting is changed to Chinese(Simplified)"
 echo "Reconnect to your VPS to check it"
 echo ""
